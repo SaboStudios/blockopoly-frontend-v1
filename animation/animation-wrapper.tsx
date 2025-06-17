@@ -1,27 +1,6 @@
 "use client";
-
-import type { ReactNode } from "react";
-
-import { motion, type MotionProps } from "framer-motion";
-
-type AnimationVariant =
-    | "fadeIn"
-    | "slideUp"
-    | "slideDown"
-    | "slideLeft"
-    | "slideRight"
-    | "scale"
-    | "bounce";
-
-interface AnimationWrapperProps extends Omit<MotionProps, "variants"> {
-    children: ReactNode;
-    variant?: AnimationVariant;
-    delay?: number;
-    duration?: number;
-    className?: string;
-    once?: boolean;
-}
-
+import { AnimationVariant, AnimationWrapperProps } from "@/types/animate";
+import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
 
 const variants: Record<AnimationVariant, Variants> = {
