@@ -30,8 +30,6 @@ export const getMetadata = ({
   return {
     generator: "Blockopoly",
     applicationName: "Blockopoly",
-    themeColor: "#000000",
-    colorScheme: "dark",
     referrer: "origin-when-cross-origin",
     keywords: [
       "blockopoly",
