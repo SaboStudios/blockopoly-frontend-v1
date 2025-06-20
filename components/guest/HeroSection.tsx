@@ -13,7 +13,7 @@ const HeroSection = () => {
     };
 
     return (
-        <section className="w-full lg:h-screen md:h-[calc(100vh-87px)] h-screen relative overflow-x-hidden ">
+        <section className="w-full lg:h-screen md:h-[calc(100vh-87px)] h-screen relative overflow-x-hidden md:mb-20 mb-10">
             {/* herobg */}
             <div className="w-full h-full overflow-hidden">
                 <Image
