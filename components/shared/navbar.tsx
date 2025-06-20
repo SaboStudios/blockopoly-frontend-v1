@@ -5,6 +5,7 @@ import LogoIcon from '@/public/logo.png';
 import Link from 'next/link';
 import { House, Volume2, VolumeOff } from 'lucide-react';
 import { useState } from 'react';
+import useSound from 'use-sound'
 
 const NavBar = () => {
     const [isSoundPlaying, setIsSoundPlaying] = useState(false);
@@ -15,6 +16,21 @@ const NavBar = () => {
         damping: 30,
         restDelta: 0.001,
     });
+
+    const [play, { pause }] = useSound('/sound/monopoly-theme.mp3', {
+        volume: 0.5,
+        loop: true,
+    })
+
+    const toggleSound = () => {
+        if (isSoundPlaying) {
+            pause()
+            setIsSoundPlaying(false)
+        } else {
+            play()
+            setIsSoundPlaying(true)
+        }
+    }
 
     return (
         <>
@@ -33,7 +49,7 @@ const NavBar = () => {
                         <House className='w-[16px] h-[16px]' />
                     </Link>
                     {/* Sound/Audio icon */}
-                    <button type='button' onClick={() => setIsSoundPlaying(!isSoundPlaying)} className="w-[40px] h-[40px] border-[1px] border-[#0E282A] hover:border-[#003B3E] transition-all duration-300 ease-in-out rounded-[12px] flex justify-center items-center bg-[#011112] text-white cursor-pointer">
+                    <button type='button' onClick={toggleSound} className="w-[40px] h-[40px] border-[1px] border-[#0E282A] hover:border-[#003B3E] transition-all duration-300 ease-in-out rounded-[12px] flex justify-center items-center bg-[#011112] text-white cursor-pointer">
                         {isSoundPlaying ? (
                             <Volume2 className='w-[16px] h-[16px]' />
                         ) : (
