@@ -1,7 +1,10 @@
+import HeroSection from "@/components/guest/HeroSection";
 
 
 export default function Home() {
   return (
-    <main></main>
+    <main className="w-full">
+      <HeroSection />
+    </main>
   );
 }

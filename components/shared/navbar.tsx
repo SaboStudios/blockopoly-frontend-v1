@@ -29,11 +29,11 @@ const NavBar = () => {
                 {/* Icons */}
                 <div className="flex items-center gap-[4px]">
                     {/* home icon */}
-                    <Link href="/" className="w-[40px] h-[40px] border-[1px] border-[#0E282A] rounded-[12px] flex justify-center items-center bg-[#011112] text-white cursor-pointer">
+                    <Link href="/" className="w-[40px] h-[40px] border-[1px] border-[#0E282A] hover:border-[#003B3E] transition-all duration-300 ease-in-out rounded-[12px] flex justify-center items-center bg-[#011112] text-white cursor-pointer">
                         <House className='w-[16px] h-[16px]' />
                     </Link>
                     {/* Sound/Audio icon */}
-                    <button type='button' onClick={() => setIsSoundPlaying(!isSoundPlaying)} className="w-[40px] h-[40px] border-[1px] border-[#0E282A] rounded-[12px] flex justify-center items-center bg-[#011112] text-white cursor-pointer">
+                    <button type='button' onClick={() => setIsSoundPlaying(!isSoundPlaying)} className="w-[40px] h-[40px] border-[1px] border-[#0E282A] hover:border-[#003B3E] transition-all duration-300 ease-in-out rounded-[12px] flex justify-center items-center bg-[#011112] text-white cursor-pointer">
                         {isSoundPlaying ? (
                             <Volume2 className='w-[16px] h-[16px]' />
                         ) : (
@@ -59,6 +59,7 @@ const NavBar = () => {
                                 fill="#011112"
                                 stroke="#0E282A"
                                 strokeWidth={1}
+                                className='group-hover:stroke-[#003B3E] transition-all duration-300 ease-in-out'
                             />
                         </svg>
                         <span className="absolute inset-0 flex items-center ml-8 text-[#00F0FF] text-[14px] leading-[24px] font-orbitron font-medium z-10">
