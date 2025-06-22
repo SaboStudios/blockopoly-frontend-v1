@@ -3,6 +3,7 @@ import Footer from "@/components/shared/Footer";
 import NavBar from "@/components/shared/navbar";
 import ScrollToTopBtn from "@/components/shared/scroll-to-top-btn";
 import { StarknetProvider } from "@/config/starknet-provider";
+import { WalletProvider } from "@/context/wallet-provider";
 import "@/styles/globals.css";
 import { getMetadata } from "@/utils/getMeatadata";
 
@@ -24,10 +25,12 @@ export default function RootLayout({
         className={`antialiased bg-[#010F10] w-full`}
       >
         <StarknetProvider>
-          <NavBar />
-          {children}
-          <ScrollToTopBtn />
-          <Footer />
+          <WalletProvider>
+            <NavBar />
+            {children}
+            <ScrollToTopBtn />
+            <Footer />
+          </WalletProvider>
         </StarknetProvider>
       </body>
     </html>
