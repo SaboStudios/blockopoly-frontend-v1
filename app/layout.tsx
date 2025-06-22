@@ -2,6 +2,7 @@ import { dmSans, kronaOne, orbitron } from "@/components/shared/fonts";
 import Footer from "@/components/shared/Footer";
 import NavBar from "@/components/shared/navbar";
 import ScrollToTopBtn from "@/components/shared/scroll-to-top-btn";
+import { StarknetProvider } from "@/config/starknet-provider";
 import "@/styles/globals.css";
 import { getMetadata } from "@/utils/getMeatadata";
 
@@ -22,10 +23,12 @@ export default function RootLayout({
       <body
         className={`antialiased bg-[#010F10] w-full`}
       >
-        <NavBar />
-        {children}
-        <ScrollToTopBtn />
-        <Footer />
+        <StarknetProvider>
+          <NavBar />
+          {children}
+          <ScrollToTopBtn />
+          <Footer />
+        </StarknetProvider>
       </body>
     </html>
   );
