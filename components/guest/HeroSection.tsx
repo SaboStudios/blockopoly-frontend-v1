@@ -121,7 +121,7 @@ const HeroSection = () => {
                                     className='group-hover:stroke-[#00F0FF] transition-all duration-300 ease-in-out'
                                 />
                             </svg>
-                            <span className="absolute inset-0 flex items-center justify-center text-[#0FF0FC] text-[12px] font-dmSans font-medium z-10">
+                            <span className="absolute inset-0 flex items-center justify-center text-[#0FF0FC] capitalize text-[12px] font-dmSans font-medium z-10">
                                 <Dices className="mr-1.5 w-[16px] h-[16px]" />
                                 Join Room
                             </span>
