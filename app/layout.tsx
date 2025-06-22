@@ -1,5 +1,7 @@
 import { dmSans, kronaOne, orbitron } from "@/components/shared/fonts";
+import Footer from "@/components/shared/Footer";
 import NavBar from "@/components/shared/navbar";
+import ScrollToTopBtn from "@/components/shared/scroll-to-top-btn";
 import "@/styles/globals.css";
 import { getMetadata } from "@/utils/getMeatadata";
 
@@ -22,6 +24,8 @@ export default function RootLayout({
       >
         <NavBar />
         {children}
+        <ScrollToTopBtn />
+        <Footer />
       </body>
     </html>
   );

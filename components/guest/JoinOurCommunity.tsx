@@ -5,7 +5,7 @@ import { RxDiscordLogo } from "react-icons/rx";
 
 const JoinOurCommunity = () => {
     return (
-        <section className="w-full py-32 px-4">
+        <section className="w-full md:py-36 py-28 px-4">
             <div className='w-full max-w-[80%] mx-auto flex flex-col justify-center items-center gap-6'>
                 <div className='w-full flex lg:flex-row items-center flex-col gap-4'>
                     <h1 className="flex-1 text-[#F0F7F7] font-orbitron md:text-[36px] text-[28px] -tracking-[2%] font-[700]">Join Our Community</h1>
@@ -14,7 +14,7 @@ const JoinOurCommunity = () => {
                     </p>
                 </div>
 
-                <div className="w-full flex justify-center items-center mt-2">
+                <div className="w-full flex md:flex-row flex-col gap-4 md:gap-0 justify-center md:items-center items-start mt-2">
                     <button
                         type="button"
                         className="relative group w-[227px] h-[40px] bg-transparent border-none p-0 overflow-hidden cursor-pointer"
