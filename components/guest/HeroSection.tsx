@@ -4,13 +4,20 @@ import herobg from "@/public/heroBg.png"
 import Image from 'next/image'
 import { Dices, KeyRound } from 'lucide-react'
 import { TypeAnimation } from 'react-type-animation';
+import { useRouter } from 'next/navigation'
 
 const HeroSection = () => {
     const [gamerName, setGamerName] = useState('');
 
+    const router = useRouter()
+
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setGamerName(e.target.value);
     };
+
+    const handleRouteToPrivateRoom = () => {
+        router.push('/game-settings')
+    }
 
     return (
         <section className="w-full lg:h-screen md:h-[calc(100vh-87px)] h-screen relative overflow-x-hidden md:mb-20 mb-10">
@@ -129,6 +136,7 @@ const HeroSection = () => {
 
                         <button
                             type="button"
+                            onClick={handleRouteToPrivateRoom}
                             className="relative group w-[227px] h-[40px] bg-transparent border-none p-0 overflow-hidden cursor-pointer"
                         >
                             <svg
