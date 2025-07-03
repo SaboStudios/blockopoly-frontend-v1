@@ -182,3 +182,7 @@
     0px 0px 39.1px #0FF0FC33;
   backdrop-filter: blur(12px);
 }
+
+.bg-settings {
+  background-image: url('../public/heroBg.png');
+}
