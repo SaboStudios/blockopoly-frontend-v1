@@ -19,6 +19,10 @@ const HeroSection = () => {
         router.push('/game-settings')
     }
 
+    const handleRouteToJoinRoom = () => {
+        router.push('/join-room')
+    }
+
     return (
         <section className="w-full lg:h-screen md:h-[calc(100vh-87px)] h-screen relative overflow-x-hidden md:mb-20 mb-10">
             {/* herobg */}
@@ -110,6 +114,7 @@ const HeroSection = () => {
                     <div className="flex justify-center items-center mt-2">
                         <button
                             type="button"
+                            onClick={handleRouteToJoinRoom}
                             className="relative left-2 group w-[140px] h-[40px] bg-transparent border-none p-0 overflow-hidden cursor-pointer"
                         >
                             <svg
