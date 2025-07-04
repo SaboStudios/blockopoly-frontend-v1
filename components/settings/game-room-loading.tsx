@@ -17,7 +17,7 @@ const GameRoomLoading = () => {
 
     // useEffect(() => {
     //     const navigationTimer = setTimeout(() => {
-    //         router.push('/game-board');
+    //         router.push('/game-play');
     //     }, 5000); // 5-second delay
 
     //     return () => clearTimeout(navigationTimer);
