@@ -15,13 +15,13 @@ const GameRoomLoading = () => {
         return () => clearInterval(dotInterval);
     }, []);
 
-    // useEffect(() => {
-    //     const navigationTimer = setTimeout(() => {
-    //         router.push('/game-play');
-    //     }, 5000); // 5-second delay
+    useEffect(() => {
+        const navigationTimer = setTimeout(() => {
+            router.push('/game-play');
+        }, 5000); // 5-second delay
 
-    //     return () => clearTimeout(navigationTimer);
-    // }, [router]);
+        return () => clearTimeout(navigationTimer);
+    }, [router]);
 
     return (
         <section className='w-full h-[calc(100dvh-87px)] bg-settings bg-cover bg-fixed bg-center'>
