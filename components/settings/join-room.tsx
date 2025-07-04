@@ -140,7 +140,6 @@ const JoinRoom = () => {
                     <div className="w-full h-[52px] flex  mt-8">
                         <input type='text' placeholder='Input room code' className='w-full h-full px-4 text-[#73838B] border-[1px] border-[#0E282A] rounded-[12px] flex-1 outline-none focus:border-[#00F0FF]' />
 
-
                         <button
                             type="button"
                             onClick={() => router.push('/game-settings')}

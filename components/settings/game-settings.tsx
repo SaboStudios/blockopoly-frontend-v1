@@ -1,6 +1,5 @@
-import Image from 'next/image'
+'use client'
 import React from 'react'
-import bgImage from "@/public/heroBg.png"
 import { FaUsers } from "react-icons/fa6";
 import {
     Select,
@@ -17,10 +16,14 @@ import { IoBuild } from 'react-icons/io5';
 import { FaHandHoldingDollar } from "react-icons/fa6";
 import { AiOutlineDollarCircle } from 'react-icons/ai';
 import { FaRandom } from 'react-icons/fa';
+import { useRouter } from 'next/navigation';
 
 
 
 const GameSettings = () => {
+
+    const router = useRouter()
+
     return (
         <section className={`w-full min-h-screen bg-settings bg-cover bg-fixed bg-center`}>
             <main className="w-full h-auto py-20 flex flex-col items-center justify-start bg-[#010F101F] backdrop-blur-[12px] px-4">
@@ -187,6 +190,7 @@ const GameSettings = () => {
                 <div className='w-full max-w-[792px] flex justify-end mt-12'>
                     <button
                         type="button"
+                        onClick={() => router.push('/game-room-loading')}
                         className="relative group w-[260px] h-[52px] bg-transparent border-none p-0 overflow-hidden cursor-pointer"
                     >
                         <svg
