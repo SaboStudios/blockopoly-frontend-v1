@@ -1,7 +1,8 @@
 'use client'
-import { ChevronLeft, ChevronRight, Copy, Settings } from 'lucide-react';
+import { ChevronRight, Copy, Settings } from 'lucide-react';
 import React, { useState } from 'react'
 import ChatRoom from './chat-room';
+import { PiChatsCircle } from 'react-icons/pi';
 
 const GameRoom = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -12,13 +13,13 @@ const GameRoom = () => {
 
     return (
         <>
-            {isSidebarOpen && (
+            {!isSidebarOpen && (
                 <button
                     onClick={toggleSidebar}
-                    className="absolute top-0 right-0 bg-[#010F10] z-10 lg:hidden text-[#869298] hover:text-[#F0F7F7] w-[60px] h-[60px] rounded-e-[12px] flex items-center justify-center border-[1px] border-white/10"
+                    className="absolute top-0 right-0 bg-[#010F10] z-10 lg:hidden text-[#869298] hover:text-[#F0F7F7] w-[40px] h-[40px] rounded-s-[8px] flex items-center justify-center border-[1px] border-white/10"
                     aria-hidden="true"
                 >
-                    <ChevronLeft />
+                    <PiChatsCircle className="w-5 h-5" />
                 </button>
             )}
             <aside
@@ -27,14 +28,14 @@ const GameRoom = () => {
                             transition-all duration-300 ease-in-out
                             fixed z-20 top-0 right-0 
                             transform ${isSidebarOpen ? 'translate-x-0 lg:translate-x-0' : 'translate-x-full lg:translate-x-0'}
-                            lg:static lg:transform-none
+                            lg:absolute lg:transform-none
                             ${isSidebarOpen ? 'lg:w-[272px] md:w-1/2 w-full' : 'lg:w-[60px] w-full'}
                         `}
             >
                 <div className="w-full h-full flex flex-col gap-3">
                     {/* Toggle button with changing icon */}
                     <button onClick={toggleSidebar} className="text-[#869298] hover:text-[#F0F7F7]">
-                        {isSidebarOpen ? <ChevronRight /> : <ChevronLeft />}
+                        {isSidebarOpen ? <ChevronRight /> : <PiChatsCircle className="size-[25px]" />}
                     </button>
                     <div className={`w-full flex justify-between items-center ${!isSidebarOpen && 'hidden'}`}>
                         {/* Show only when the sidebar is open */}
