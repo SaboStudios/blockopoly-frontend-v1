@@ -7,3 +7,14 @@ export interface GameContextProps {
   setSelectedColor: (color: string) => void;
   // Add other game states and functions here (e.g., currentTurn, properties, etc.)
 }
+
+export interface BoardSquare {
+  id: number;
+  type: "property" | "corner" | "special";
+  name: string;
+  position: "bottom" | "left" | "top" | "right";
+  gridPosition: { row: number; col: number };
+  price?: number;
+  color?: string;
+  icon?: string; // For special squares like '?', jail, etc.
+}
